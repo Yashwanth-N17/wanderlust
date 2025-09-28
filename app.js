@@ -92,7 +92,7 @@ app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
 
 // Catch-all route for undefined endpoints
-app.all("*", (req, res, next) => {
+app.all("/*", (req, res, next) => {
   next(new ExpressError(404, "Page Not Found"));
 });
 
